@@ -1,4 +1,189 @@
-.header{
-    background-color: red;
-    color: #fff;
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: white;
+
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 10;
+
+    padding: 12px;
+    width: 100%;
+    &__logo {
+        &__item {
+            text-decoration: none;
+            font-family: Garamond;
+            font-weight: 700;
+            font-size: 28px;
+            color: black;
+            padding: 18px;
+            white-space: nowrap;
+        }
+    }
+    &__logo :hover {
+        color: black;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        margin: 0%;
+
+        a {
+            text-decoration: none;
+            font-family: Garamond;
+            font-weight: 400;
+            font-size: 22px;
+            color: black;
+            white-space: nowrap;
+
+        }
+        .header__social__mobile {
+            display: none;
+            gap: 20px;
+        }
+    }
+    &__menu :hover {
+        color: grey;
+        text-decoration: underline;
+        transition: 0.3s;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 18px;
+
+        &__item {
+            padding: 5px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &__social :hover {
+        background-color: rgb(224, 216, 216);
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+    
+    .popup {
+        display: none;
+    }
+
+    @media(max-width: 991px) {
+        .header {
+            &__logo {
+                a {
+                    font-size: 20px;
+                }
+            }
+            &__menu {
+                gap: 12px;
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 771px) {
+        .header {
+            &__logo {
+                a {
+                    padding: 0%;
+                    margin-right: 16px;
+                }
+            }
+            &__menu {
+                padding: 0%;
+                &__item {
+                    gap: 6px;
+                }
+            }
+            &__social {
+                display: none;
+            }
+        }
+    }
+
+    @media(max-width: 600px) {
+        .header {
+            
+            &__menu {
+                display: none;
+            }
+            &__social {
+                display: none;
+            }
+            &__mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                
+                width: 24px;
+                height: 18px;
+        
+                
+                span {
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: black;
+                }
+                &__line1 {
+                    bottom: 0;
+
+                }
+                &__line2 {
+                    bottom: 8px;
+                }
+            }           
+            
+        }
+        .popup {
+            position: fixed;
+            top: 0;
+            left: -110%;
+    
+            display: flex;
+            
+            background-color: white;
+    
+            width: 100%;
+            height: 100%;
+            margin: 38px 0 0 0;
+            z-index: 20;
+            transition: 0.3s;
+        }
+        .popup.open {
+            left: 0;
+        }
+        .popup .header__menu {
+            margin-top: 30px;
+            gap: 20px;
+            width: 100%;
+            height: 50%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        .popup .header__social__mobile {
+            display: flex;
+
+        }
+    }
+    
 }
