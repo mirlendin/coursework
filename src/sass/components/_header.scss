@@ -141,11 +141,14 @@
                     background-color: black;
                 }
                 &__line1 {
-                    bottom: 0;
+                    top: 1px;
 
                 }
                 &__line2 {
                     bottom: 8px;
+                }
+                &__line3 {
+                    bottom: 1px;
                 }
             }           
             
@@ -184,6 +187,23 @@
             display: flex;
 
         }
+
+        .header__mobile.active .header__mobile__line1 {
+            width: 50%;
+            transition: 0.3s;
+        }
+        .header__mobile.active .header__mobile__line2 {
+            width: 80%;
+            transition: 0.3s;
+        }
+        .header__mobile.active .header__mobile__line3 {
+            width: 50%;
+            transition: 0.3s;
+
+        }
     }
     
+}
+body.noscroll {
+    overflow: hidden;
 }

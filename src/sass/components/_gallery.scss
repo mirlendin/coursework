@@ -1,0 +1,76 @@
+.gallery {
+    font-family: 'EB Garamond', serif;
+
+    &__line {
+        border-top: 1px solid rgb(192, 192, 192);
+        max-width: 98%;
+        margin: 0 auto;
+
+        @media screen and(max-width:1200px) {
+            max-width: 97%;
+        }
+
+        @media screen and(max-width:767px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            padding: 30px 0;
+
+            @media screen and (max-width: 768px) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &__slide {
+        img {
+            width: 100%;
+            height: 200px;
+
+            @media screen and (max-width: 768px) {
+                height: 150px;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .slick-arrow.slick-prev {
+        position: absolute;
+        border: none;
+        width: 30px;
+        height: 55px;
+        left: 15px;
+        top: 50%;
+        z-index: 10;
+        font-size: 0;
+        background: url('../img/left.svg') 0 0 / 100% no-repeat;
+        transform: rotate(180deg);
+
+        @media screen and (max-width: 768px) {
+            height: 40px;
+            width: 20px;
+        }
+    }
+
+    .slick-arrow.slick-next {
+        position: absolute;
+        border: none;
+        width: 30px;
+        height: 55px;
+        right: 15px;
+        top: 50%;
+        z-index: 10;
+        font-size: 0;
+        background: url('../img/left.svg') 0 0 / 100% no-repeat;
+
+        @media screen and (max-width: 768px) {
+            height: 40px;
+            width: 20px;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.features {
+    margin-top: 50px;
+    &__title {
+        margin: 30px 0;
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &__grid {
+        justify-content: center;
+        display: grid;
+
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+
+        @media screen and (max-width: 850px) {
+            grid-template-columns: auto auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: auto;
+        }
+
+
+        .grid_item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(172, 169, 169, 0.8);
+            border-left: 1px solid rgba(172, 169, 169, 0.8);
+            padding: 20px;
+            text-align: center;
+
+            h4 {
+                margin: 10px 0;
+            }
+
+            @media screen and (max-width: 600px) {
+                border-left: none;
+            }
+
+        }
+
+        .air,
+        .clock {
+            border-left: none;
+        }
+
+        .clock,
+        .face,
+        .genius {
+            border-bottom: none;
+        }
+
+        .mov {
+            @media screen and (max-width: 850px) {
+                border-left: none;
+                border-bottom: 1px solid rgba(172, 169, 169, 0.8);
+            }
+        }
+
+        .clock {
+            @media screen and (max-width: 850px) {
+                border-left: 1px solid rgba(172, 169, 169, 0.8);
+                border-bottom: 1px solid rgba(172, 169, 169, 0.8);
+            }
+
+            @media screen and (max-width:600px) {
+                border-left: none;
+                border-bottom: 1px solid rgba(172, 169, 169, 0.8);
+            }
+        }
+
+        .face {
+            @media screen and (max-width:850px) {
+                border-left: none;
+            }
+
+            @media screen and (max-width:600px) {
+                border-bottom: 1px solid rgba(172, 169, 169, 0.8);
+            }
+        }
+
+        .genius {
+            @media screen and (max-width:600px) {
+                border-bottom: 1px solid rgba(172, 169, 169, 0.8);
+            }
+        }
+    }
+}
