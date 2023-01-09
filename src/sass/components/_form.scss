@@ -32,6 +32,7 @@
 
     &__radio {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
 
         @media screen and (max-width: 768px) {
@@ -78,8 +79,11 @@
     &__text_area {
 
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         .area {
+            margin-top: 12px;
             width: 100%;
             flex: auto;
             padding: 15px;
